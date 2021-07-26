@@ -1,5 +1,5 @@
 import { RouteDefinition } from 'solid-app-router';
-import { lazy } from 'solid-js';
+import { Component, lazy } from 'solid-js';
 // import { ContributorsData } from './pages/Contributors.data';
 import { BenchmarkData } from './pages/Benchmarks.data';
 import { DocsData } from './pages/Docs.data';
@@ -10,28 +10,28 @@ import { DocsData } from './pages/Docs.data';
 export const routes: RouteDefinition[] = [
   {
     path: '/',
-    component: lazy(() => import('./pages/Home')),
     data: () => ({
       benchmarks: BenchmarkData(),
     }),
+    component: lazy(() => import('./pages/Home')) as unknown as Component,
   },
   {
     path: '/guide',
-    component: lazy(() => import('./pages/Docs')),
+    component: lazy(() => import('./pages/Docs')) as unknown as Component,
     data: DocsData,
   },
   {
     path: '/docs',
-    component: lazy(() => import('./pages/Docs')),
+    component: lazy(() => import('./pages/Docs')) as unknown as Component,
     children: [
       {
         path: ':version',
-        component: lazy(() => import('./pages/Docs')),
+        component: lazy(() => import('./pages/Docs')) as unknown as Component,
         data: DocsData,
       },
       {
         path: '*all',
-        component: lazy(() => import('./pages/Docs')),
+        component: lazy(() => import('./pages/Docs')) as unknown as Component,
         data: DocsData,
       },
     ],
