@@ -28,6 +28,13 @@ export const routes: RouteDefinition[] = [
         path: ':version',
         component: lazy(() => import('./pages/Docs')),
         data: DocsData,
+        children: [
+          {
+            path: '/api',
+            component: lazy(() => import('./pages/Docs')),
+            data: DocsData,
+          },
+        ],
       },
       {
         path: '*all',
