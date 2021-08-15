@@ -6,7 +6,8 @@ import Social from './Social';
 
 const links: MenuLinkProps[] = [
   { title: 'Get Started', path: '/guide' },
-  { title: 'Docs', path: '/docs/latest' },
+  { title: 'Docs', path: '/docs/latest ' },
+
   { title: 'Resources', path: '/resources' },
   { title: 'Tutorial', path: '/tutorial' },
   { title: 'Examples', path: '/examples' },
