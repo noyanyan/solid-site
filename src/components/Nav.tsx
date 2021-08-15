@@ -6,7 +6,7 @@ import Social from './Social';
 
 const links: MenuLinkProps[] = [
   { title: 'Get Started', path: '/guide' },
-  { title: 'Docs', path: '/docs/latest/api' },
+  { title: 'Docs', path: '/docs/latest' },
   { title: 'Resources', path: '/resources' },
   { title: 'Tutorial', path: '/tutorial' },
   { title: 'Examples', path: '/examples' },
@@ -28,7 +28,6 @@ const MenuLink: Component<MenuLinkProps> = (props) => (
   <li>
     <NavLink
       href={props.path}
-      external={props.external}
       class="inline-flex items-center space-x-2 transition m-1 px-4 py-3 rounded hover:text-white hover:bg-solid-medium whitespace-nowrap"
       activeClass="bg-solid-medium text-white"
     >
