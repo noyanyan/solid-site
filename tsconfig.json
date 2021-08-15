@@ -18,5 +18,5 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"]
   },
   "include": ["./src", "vite.config.js", "./scripts"],
-  "exclude": ["node_modules/", "Markdown.tsx"]
+  "exclude": ["node_modules", "Markdown.tsx", "dist"]
 }
